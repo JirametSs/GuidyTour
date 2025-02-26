@@ -1,0 +1,266 @@
+/* 🌟 Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 🌟 Navbar */
+.navbar {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #162447, #1f4068);
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo a:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+  transform: translateY(-3px);
+}
+
+/* 🌟 Hero Section */
+.hero {
+  background: url('/src/assets/best-beaches-in-phuket-4799.png') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: #fff;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero .btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #ffcc00;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* 🌟 Tour Packages */
+.tour-packages {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.tour-packages h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.package-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.package-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.package-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover img {
+  transform: scale(1.1);
+}
+
+.package-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.package-card p {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* 🌟 Footer */
+.footer {
+  background: linear-gradient(90deg, #0d1b2a, #1b263b, #415a77);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer p {
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.footer .social-icons {
+  margin-top: 1rem;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #ffcc00;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+}
