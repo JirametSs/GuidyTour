@@ -1,0 +1,125 @@
+/* 🌟 General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+/* 🌟 Hero Section */
+.hero {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* 🌟 About Container */
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.about-container h2 {
+  color: #007bff;
+  font-size: 24px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* 🌟 Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.feature-item {
+  background: #ffffff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+  transform: scale(1.05);
+}
+
+/* 🌟 Services Section */
+.services-section {
+  background: #e0e7ff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+}
+
+/* 🌟 Call to Action */
+.cta {
+  background: linear-gradient(90deg, #2a5298, #2a5298);
+  color: white;
+  padding: 40px 20px;
+}
+
+.cta h2 {
+  margin-bottom: 10px;
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #ffc107;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.cta .btn:hover {
+  background-color: #2db1f2;
+}
+.back-btn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background-color: #cc0000;
+}

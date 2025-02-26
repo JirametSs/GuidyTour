@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สมัครสมาชิก | Travel Hub</title>
+  <link rel="stylesheet" href="register.css">
+  <script>
+    function goBack() {
+      window.history.back(); // Go to the previous page
+    }
+  </script>
+</head>
+<body>
+
+  <div class="register-container">
+    <h1>📝 สมัครสมาชิก</h1>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goBack()">⬅ กลับ</button>
+
+    <form id="register-form">
+      <div class="input-group">
+        <label for="name">👤 ชื่อผู้ใช้</label>
+        <input type="text" id="name" placeholder="กรอกชื่อของคุณ" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">📧 อีเมล</label>
+        <input type="email" id="email" placeholder="กรอกอีเมลของคุณ" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">🔒 รหัสผ่าน</label>
+        <input type="password" id="password" placeholder="ตั้งรหัสผ่านของคุณ" required>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm-password">🔑 ยืนยันรหัสผ่าน</label>
+        <input type="password" id="confirm-password" placeholder="ยืนยันรหัสผ่าน" required>
+      </div>
+
+      <button type="submit" class="register-btn">สมัครสมาชิก</button>
+    </form>
+
+    <p>มีบัญชีแล้ว? <a href="login.html">เข้าสู่ระบบ</a></p>
+  </div>
+
+  <script src="register.js"></script>
+
+</body>
+</html>

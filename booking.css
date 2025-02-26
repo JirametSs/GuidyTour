@@ -1,0 +1,132 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  text-align: center;
+}
+
+/* Bookings Container */
+.bookings-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #222;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-btn, .logout-btn {
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff4d4d, #cc0000);
+  color: white;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #cc0000, #990000);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: #007bff;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  font-size: 16px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+tbody tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s ease-in-out;
+}
+
+/* Payment Status Styling */
+.paid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.pending {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.canceled {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bookings-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-btn, .logout-btn {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  thead th, tbody td {
+    padding: 8px;
+  }
+}

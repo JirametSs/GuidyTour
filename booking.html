@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การจองแพ็คเกจ | Travel Hub</title>
+  <link rel="stylesheet" href="booking.css">
+  <script>
+    function logout() {
+      localStorage.removeItem("token"); // Remove JWT token
+      alert("ออกจากระบบสำเร็จ!");
+      window.location.href = "login.html"; // Redirect to login
+    }
+
+    function goHome() {
+      window.location.href = "index.html"; // Redirect to homepage
+    }
+  </script>
+</head>
+<body>
+
+  <div class="bookings-container">
+    <h1>📌 รายการการจองแพ็คเกจ</h1>
+    
+    <div class="buttons">
+      <button class="back-btn" onclick="goHome()">🏠 กลับหน้าหลัก</button>
+      <button class="logout-btn" onclick="logout()">🚪 ออกจากระบบ</button>
+    </div>
+
+    <table id="bookings-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>ชื่อแพ็คเกจ</th>
+          <th>ชื่อผู้เดินทาง</th>
+          <th>วันที่จอง</th>
+          <th>สถานะการชำระเงิน</th>
+          <th>ราคา</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be inserted dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="booking.js"></script>
+
+</body>
+</html>

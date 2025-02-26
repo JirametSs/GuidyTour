@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ | Travel Hub</title>
+  <link rel="stylesheet" href="login.css">
+  <script>
+    function goBack() {
+      window.history.back(); // Go to the previous page
+    }
+
+    function goHome() {
+      window.location.href = "index.html"; // Redirects to homepage
+    }
+
+    async function loginUser() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("กรุณากรอกอีเมลและรหัสผ่านให้ครบถ้วน!");
+        return;
+      }
+
+      try {
+        const response = await fetch("http://localhost:5000/api/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("เข้าสู่ระบบสำเร็จ!");
+          localStorage.setItem("token", data.token); // Save JWT token
+          window.location.href = "booking.html"; // Redirect after login
+        } else {
+          alert(data.message); // Show error message
+        }
+      } catch (error) {
+        console.error("เกิดข้อผิดพลาด:", error);
+        alert("เกิดข้อผิดพลาดในการเข้าสู่ระบบ!");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>🔑 เข้าสู่ระบบ</h1>
+    
+    <!-- Back Button -->
+    <button class="back-btn" onclick="goHome()">⬅ กลับ</button>
+
+    <form id="login-form">
+      <div class="input-group">
+        <label for="email">📧 อีเมล</label>
+        <input type="email" id="email" placeholder="กรอกอีเมลของคุณ" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">🔒 รหัสผ่าน</label>
+        <input type="password" id="password" placeholder="กรอกรหัสผ่านของคุณ" required>
+      </div>
+
+      <button type="button" class="login-btn" onclick="loginUser()">เข้าสู่ระบบ</button>
+    </form>
+
+    <p>ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a></p>
+  </div>
+
+</body>
+</html>
